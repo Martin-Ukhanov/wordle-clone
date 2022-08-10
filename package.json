@@ -1,0 +1,30 @@
+{
+  "name": "wordle-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martin-Ukhanov/wordle-clone.git"
+  },
+  "author": "Martin Ukhanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Martin-Ukhanov/wordle-clone/issues"
+  },
+  "homepage": "https://github.com/Martin-Ukhanov/wordle-clone#readme",
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "2.7.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
