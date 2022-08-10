@@ -42,14 +42,7 @@ const createRow = () => {
     }
   };
 
-  return {
-    getLength,
-    getTile,
-    getValue,
-    isEmpty,
-    isFilled,
-    clear,
-  };
+  return { getLength, getTile, getValue, isEmpty, isFilled, clear };
 };
 
 export default createRow;

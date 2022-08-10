@@ -12,12 +12,7 @@ const createTile = () => {
     status = newStatus;
   };
 
-  return {
-    getValue,
-    setValue,
-    getStatus,
-    setStatus,
-  };
+  return { getValue, setValue, getStatus, setStatus };
 };
 
 export default createTile;
