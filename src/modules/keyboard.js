@@ -37,7 +37,7 @@ const keyboard = (() => {
 
   const clear = () => {
     for (let i = 0; i < keys.length; i += 1) {
-      keys[i].setStatus('');
+      keys[i].setStatus(undefined);
     }
   };
 

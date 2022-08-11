@@ -23,22 +23,22 @@ const createRow = () => {
 
   const isEmpty = () => {
     for (let i = 0; i < tiles.length; i += 1) {
-      if (tiles[i].getValue() !== '') return false;
+      if (tiles[i].getValue() !== undefined) return false;
     }
     return true;
   };
 
   const isFilled = () => {
     for (let i = 0; i < tiles.length; i += 1) {
-      if (tiles[i].getValue() === '') return false;
+      if (tiles[i].getValue() === undefined) return false;
     }
     return true;
   };
 
   const clear = () => {
     for (let i = 0; i < tiles.length; i += 1) {
-      tiles[i].setValue('');
-      tiles[i].setStatus('');
+      tiles[i].setValue(undefined);
+      tiles[i].setStatus(undefined);
     }
   };
 
