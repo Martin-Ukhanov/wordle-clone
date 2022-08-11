@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+:root {
+  --min-game-width: 352px;
+  --max-game-width: 510px;
+  --board-gap: 10px;
+  --tile-size: 60px;
+  --tile-border-size: 4px;
+  --keyboard-gap: 10px;
+  --key-height: 40px;
+  --color-text: #ffffff;
+  --color-background: #121213;
+  --color-absent: #3a3a3c;
+  --color-present: #b59f3b;
+  --color-correct: #538d4e;
+  --color-key: #818384;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-width: var(--min-game-width);
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+#game {
+  max-width: var(--max-game-width);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--board-gap);
+}
+
+#board .row {
+  display: flex;
+  column-gap: var(--board-gap);
+  transition: transform 30ms;
+}
+
+#board .tile {
+  width: var(--tile-size);
+  height: var(--tile-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--tile-border-size) solid var(--color-absent);
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+#board .tile.filled {
+  border: var(--tile-border-size) solid var(--color-text);
+}
+
+#board .tile.absent {
+  border: none;
+  background-color: var(--color-absent);
+}
+
+#board .tile.present {
+  border: none;
+  background-color: var(--color-present);
+}
+
+#board .tile.correct {
+  border: none;
+  background-color: var(--color-correct);
+}
+
+#message-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  position: absolute;
+  padding: 6px 12px;
+  color: var(--color-background);
+  background-color: var(--color-text);
+  border-radius: 100px;
+}
+
+#keyboard {
+  width: 100%;
+  padding: 0 var(--keyboard-gap);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--keyboard-gap);
+}
+
+#keyboard .row {
+  display: flex;
+  column-gap: var(--keyboard-gap);
+}
+
+#keyboard .key {
+  height: var(--key-height);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  background-color: var(--color-key);
+  border: none;
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+#keyboard .half-key {
+  flex: 0.375;
+}
+
+#keyboard .key.delete,
+#keyboard .key.enter {
+  flex: 1.625;
+}
+
+#keyboard .key.absent {
+  background-color: var(--color-absent);
+}
+
+#keyboard .key.present {
+  background-color: var(--color-present);
+}
+
+#keyboard .key.correct {
+  background-color: var(--color-correct);
+}
